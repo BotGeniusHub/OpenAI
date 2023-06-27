@@ -3,7 +3,7 @@ import openai
 from pyrogram import Client, filters, idle
 
 # Set up OpenAI API
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("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")
 
 # Initialize the Telegram bot
 bot = Client("question_bot", api_id=YOUR_API_ID, api_hash="YOUR_API_HASH", bot_token="YOUR_BOT_TOKEN")
