@@ -6,7 +6,7 @@ from pyrogram import Client, filters, idle
 openai.api_key = os.getenv("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")
 
 # Initialize the Telegram bot
-bot = Client("question_bot", api_id=YOUR_API_ID, api_hash="YOUR_API_HASH", bot_token="YOUR_BOT_TOKEN")
+bot = Client("question_bot", api_id=16743442, api_hash="12bbd720f4097ba7713c5e40a11dfd2a", bot_token="6206599982:AAECqgU3Os4kTjSuS_Zz-zcM7JZHWdvbI10")
 
 @bot.on_message(filters.command("start"))
 def start_command(client, message):
