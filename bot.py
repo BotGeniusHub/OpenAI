@@ -21,16 +21,20 @@ def answer_question(client, message):
     # Check if the message is a question
     if message.text.endswith("?"):
         # Generate a response from OpenAI
-        response = openai.Completion.create(
-            model="text-davinci-003",
-            prompt=message.text,
-            temperature=0,
-            max_tokens=100,
-            top_p=1,
-            frequency_penalty=0.0,
-            presence_penalty=0.0,
-            stop=["\n"]
-        )
+        headers = {
+            "Authorization": f"Bearer {openai.api_key}"
+        }
+        data = {
+            "model": "text-davinci-003",
+            "prompt": message.text,
+            "temperature": 0,
+            "max_tokens": 100,
+            "top_p": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "stop": ["\n"]
+        }
+        response = openai.Completion.create(data=data, headers=headers)
 
         # Extract the answer from the response
         answer = response.choices[0].text.strip()
