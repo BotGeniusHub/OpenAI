@@ -3,7 +3,7 @@ import openai
 from pyrogram import Client, filters, idle
 
 # Set up OpenAI API
-openai.api_key = os.getenv("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")
+openai.api_key = "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"
 
 # Initialize the Telegram bot
 bot = Client("question_bot", api_id=16743442, api_hash="12bbd720f4097ba7713c5e40a11dfd2a", bot_token="6206599982:AAECqgU3Os4kTjSuS_Zz-zcM7JZHWdvbI10")
@@ -49,4 +49,4 @@ def answer_question(client, message):
 
 # Run the bot
 bot.run()
-idle()
+idle() 
