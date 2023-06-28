@@ -30,8 +30,8 @@ tim = 1
 #Defaults
 user = ""
 running = False
-cache = None
-qcache = None
+cache = {}  # Initializing cache as an empty dictionary
+qcache = []  # Initializing qcache as an empty list
 chat_log = "-1001596651023"
 botname = 'About Nano'
 username = 'AboutNanoBot'
@@ -62,8 +62,8 @@ def start(bot, update):
     left = str(tim)
     if tim == 1:
         chat_log = None
-        cache = None
-        qcache = None
+        cache = {}  # Initializing cache as an empty dictionary
+        qcache = []  # Initializing qcache as an empty list
         botname = 'Harshit Ethic'
         username = 'harshitethic_bot'
         update.message.reply_text('Hi')
@@ -89,16 +89,16 @@ def reset(bot, update):
     left = str(tim)
     if user == update.message.from_user.id:
         chat_log = None
-        cache = None
-        qcache = None
+        cache = {}  # Initializing cache as an empty dictionary
+        qcache = []  # Initializing qcache as an empty list
         botname = 'Harshit Ethic'
         username = 'harshitethic_bot'
         update.message.reply_text('Bot has been reset, send a message!')
         return
     if tim == 1:
         chat_log = None
-        cache = None
-        qcache = None
+        cache = {}  # Initializing cache as an empty dictionary
+        qcache = []  # Initializing qcache as an empty list
         botname = 'Harshit Ethic'
         username = 'harshitethic_bot'
         update.message.reply_text('Bot has been reset, send a message!')
@@ -124,8 +124,8 @@ def retry(bot, update):
         return
     if tim == 1:
         chat_log = None
-        cache = None
-        qcache = None
+        cache = {}  # Initializing cache as an empty dictionary
+        qcache = []  # Initializing qcache as an empty list
         botname = 'Harshit Ethic'
         username = 'harshitethic_bot'
         update.message.reply_text('Send a message!')
@@ -184,8 +184,8 @@ def wait(bot, update, botname, username, new):
                 tim = tim - 1
             if running == True:
                 chat_log = None
-                cache = None
-                qcache = None
+                cache = {}  # Initializing cache as an empty dictionary
+                qcache = []  # Initializing qcache as an empty list
                 user = ""
                 username = 'harshitethic_bot'
                 botname = 'Harshit Ethic'
