@@ -1,2 +1,4 @@
-pyrogram
+python-telegram-bot
+VaderSentiment
 openai
+regex
